@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080808">
+<meta name="description" content="BlackedOut Originals — a GTA V FiveM roleplay crew. Loyalty is earned. Respect is built.">
+<title>BlackedOut Originals — Independent FiveM Crew</title>
+<style>
+:root{--bg:#080808;--panel:#111010;--panel2:#171313;--red:#b51220;--red2:#e12735;--white:#f5f1ef;--muted:#a8a09f;--line:rgba(255,255,255,.12);--max:1240px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{margin:0;background:var(--bg);color:var(--white);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.5}
+a{color:inherit;text-decoration:none}
+button,input,textarea{font:inherit}
+button,a{ -webkit-tap-highlight-color:transparent}
+.wrap{width:min(var(--max),calc(100% - 44px));margin-inline:auto}
+header{position:fixed;z-index:20;top:0;left:0;width:100%;background:rgba(8,8,8,.78);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:12px;min-width:0}
+.mark{width:42px;height:42px;display:grid;place-items:center;border:1px solid rgba(225,39,53,.75);background:linear-gradient(145deg,#2a080c,#090909);clip-path:polygon(50% 0,92% 18%,86% 76%,50% 100%,14% 76%,8% 18%);color:#fff;font-weight:900;font-size:17px}
+.brand-name{font-size:13px;letter-spacing:.18em;font-weight:850;line-height:1.25}
+.brand-sub{font-size:9px;letter-spacing:.25em;color:var(--muted);margin-top:4px}
+.nav-links{display:flex;align-items:center;gap:27px}
+.nav-links a{font-size:10px;letter-spacing:.14em;color:#d4cecc;transition:color .2s}
+.nav-links a:hover{color:#ff6670}
+.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 17px;border:1px solid var(--red);background:var(--red);color:white;font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;transition:transform .2s,background .2s,border-color .2s}
+.nav-cta:hover,.btn:hover{transform:translateY(-2px);background:#d21b2a;border-color:#d21b2a}
+.menu-toggle{display:none;background:none;color:white;border:1px solid var(--line);padding:9px 11px}
+.hero{min-height:790px;display:flex;align-items:center;position:relative;overflow:hidden;padding:140px 0 70px;background:#090909}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,6,6,.98) 0%,rgba(6,6,6,.88) 39%,rgba(6,6,6,.25) 100%),linear-gradient(0deg,#080808 0%,transparent 25%,rgba(8,8,8,.15) 100%),url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=2200&q=85') center 56%/cover no-repeat;transform:scale(1.03);animation:heroIn 1.4s ease-out both}
+.hero:after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 78% 48%,rgba(181,18,32,.18),transparent 42%);mix-blend-mode:screen}
+.hero-inner{position:relative;z-index:1;max-width:760px}
+.eyebrow{display:flex;align-items:center;gap:12px;color:#ef5962;font-size:10px;letter-spacing:.25em;font-weight:800;text-transform:uppercase}
+.eyebrow:before{content:"";width:32px;height:1px;background:var(--red2)}
+h1{font-size:clamp(54px,8.6vw,112px);line-height:.88;letter-spacing:-.075em;margin:25px 0 25px;font-weight:950;text-transform:uppercase}
+h1 span{display:block;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.78);text-shadow:0 0 30px rgba(181,18,32,.08)}
+h1 em{font-style:normal;color:#d51c2a}
+.hero-copy{max-width:470px;color:#c0b8b6;font-size:15px;line-height:1.8;margin-bottom:30px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn-outline{background:rgba(8,8,8,.3);border-color:rgba(255,255,255,.28)}
+.btn-outline:hover{background:rgba(255,255,255,.08);border-color:#fff}
+.hero-foot{display:flex;gap:30px;flex-wrap:wrap;margin-top:64px;padding-top:20px;border-top:1px solid var(--line);max-width:650px}
+.hero-stat{display:flex;flex-direction:column;gap:4px}
+.hero-stat strong{font-size:12px;letter-spacing:.1em}
+.hero-stat span{font-size:9px;color:var(--muted);letter-spacing:.17em;text-transform:uppercase}
+.scroll-cue{position:absolute;right:22px;bottom:50px;z-index:2;writing-mode:vertical-rl;color:#aaa;font-size:9px;letter-spacing:.25em}
+.section{padding:105px 0}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:25px;margin-bottom:40px}
+.kicker{color:#e34a54;font-size:10px;letter-spacing:.22em;text-transform:uppercase;font-weight:800}
+h2{font-size:clamp(34px,5vw,58px);line-height:.98;letter-spacing:-.055em;text-transform:uppercase;margin:13px 0 0}
+h2 span{color:var(--red2)}
+.section-intro{max-width:420px;color:var(--muted);font-size:13px;line-height:1.8}
+.legacy{background:linear-gradient(180deg,#0b0a0a,#100b0c);border-block:1px solid rgba(255,255,255,.06)}
+.legacy-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+.legacy-art{min-height:420px;position:relative;overflow:hidden;background:linear-gradient(145deg,#1d1112,#090909 70%);border:1px solid var(--line)}
+.legacy-art img{width:100%;height:100%;min-height:420px;object-fit:cover;opacity:.67;filter:grayscale(.7) contrast(1.1)}
+.art-overlay{position:absolute;inset:0;background:linear-gradient(0deg,rgba(8,8,8,.88),transparent 75%),linear-gradient(120deg,rgba(181,18,32,.18),transparent 50%)}
+.art-caption{position:absolute;left:25px;right:25px;bottom:24px;display:flex;justify-content:space-between;align-items:end;gap:20px}
+.art-caption strong{font-size:18px;letter-spacing:.05em;text-transform:uppercase}
+.art-caption small{color:#e05a63;font-size:9px;letter-spacing:.18em}
+.legacy-copy p{color:var(--muted);font-size:14px;line-height:1.9}
+.principles{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:28px}
+.principle{border-top:1px solid var(--red);padding-top:13px}
+.principle b{display:block;font-size:10px;letter-spacing:.13em;text-transform:uppercase}
+.principle span{display:block;color:var(--muted);font-size:11px;margin-top:6px}
+.crew-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.crew-card{position:relative;min-height:300px;background:#151212;border:1px solid var(--line);overflow:hidden}
+.crew-card img{position:absolute;width:100%;height:100%;object-fit:cover;filter:grayscale(1);opacity:.58;transition:transform .6s,filter .6s,opacity .6s}
+.crew-card:hover img{transform:scale(1.06);filter:grayscale(.25);opacity:.75}
+.crew-card:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(7,7,7,.98),rgba(7,7,7,.05) 75%)}
+.crew-info{position:absolute;z-index:1;left:20px;right:20px;bottom:20px}
+.crew-rank{color:#ef515d;font-size:9px;letter-spacing:.2em;text-transform:uppercase}
+.crew-info h3{font-size:23px;text-transform:uppercase;letter-spacing:-.04em;margin:7px 0}
+.crew-info p{color:#bcb4b2;font-size:11px;margin:0}
+.placeholder-note{color:#837b79;font-size:10px;letter-spacing:.05em;margin-top:15px}
+.gallery{background:#0e0c0c}
+.gallery-grid{display:grid;grid-template-columns:1.2fr .8fr .8fr;grid-template-rows:190px 190px;gap:12px}
+.gallery-item{position:relative;overflow:hidden;background:#171111;border:1px solid var(--line)}
+.gallery-item:first-child{grid-row:span 2}
+.gallery-item img{width:100%;height:100%;object-fit:cover;filter:grayscale(.65);opacity:.72;transition:transform .6s,filter .4s}
+.gallery-item:hover img{transform:scale(1.06);filter:grayscale(0)}
+.gallery-item span{position:absolute;left:15px;bottom:13px;font-size:9px;letter-spacing:.17em;text-transform:uppercase;text-shadow:0 2px 10px #000}
+.recruit-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:60px}
+.recruit-copy p{color:var(--muted);font-size:13px;line-height:1.9}
+.requirements{margin-top:25px;display:grid;gap:12px}
+.requirements div{display:flex;gap:10px;align-items:center;font-size:11px;color:#ddd}
+.requirements i{font-style:normal;color:#f14b57}
+.form-card{background:#111010;border:1px solid var(--line);padding:28px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{display:block;color:#bdb5b3;font-size:9px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+input,textarea{width:100%;background:#090909;border:1px solid #393132;color:white;padding:13px 12px;outline:none;border-radius:0}
+input:focus,textarea:focus{border-color:#b51220}
+textarea{min-height:100px;resize:vertical}
+.field{margin-bottom:16px}
+.form-card .btn{width:100%;cursor:pointer}
+.form-message{font-size:11px;color:#f18b91;margin-top:12px;display:none}
+.discord-band{padding:55px 0;background:linear-gradient(100deg,#4c0910,#a80e1d 60%,#510910);position:relative;overflow:hidden}
+.discord-inner{display:flex;align-items:center;justify-content:space-between;gap:25px}
+.discord-inner h2{font-size:clamp(30px,4vw,48px);margin:0}
+.discord-inner p{font-size:12px;color:#f1c8ca;margin:10px 0 0}
+.discord-band .btn{background:#080808;border-color:#080808;white-space:nowrap}
+.portal{background:#0b0a0a}
+.portal-card{border:1px solid var(--line);padding:35px;display:flex;align-items:center;justify-content:space-between;gap:25px;background:linear-gradient(115deg,#141010,#090909)}
+.portal-card p{color:var(--muted);font-size:12px;max-width:570px;line-height:1.8}
+footer{padding:30px 0;border-top:1px solid var(--line);background:#070707}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.footer-note{font-size:9px;color:#8e8584;letter-spacing:.1em}
+.footer-links{display:flex;gap:18px;color:#bcb4b2;font-size:10px}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+@keyframes heroIn{from{opacity:.45;transform:scale(1.08)}to{opacity:1;transform:scale(1.03)}}
+@media(max-width:1050px){.crew-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:850px){.nav-links{gap:14px}.nav-links a{font-size:9px}.nav-cta{display:none}.legacy-grid,.recruit-layout{grid-template-columns:1fr;gap:35px}.crew-grid{grid-template-columns:repeat(2,1fr)}.gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:220px 160px 160px}.gallery-item:first-child{grid-row:span 2}.gallery-item:last-child{grid-column:span 2}.section{padding:80px 0}}
+@media(max-width:620px){.wrap{width:min(var(--max),calc(100% - 30px))}.nav{height:68px}.menu-toggle{display:block}.nav-links{display:none;position:absolute;top:68px;left:0;width:100%;padding:20px 22px 24px;background:rgba(8,8,8,.98);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}.nav-links.open{display:flex}.nav-links a{font-size:11px;padding:6px 0}.hero{min-height:740px;padding-top:120px}.hero-bg{background-position:58% center;background-image:linear-gradient(90deg,rgba(6,6,6,.95),rgba(6,6,6,.56)),linear-gradient(0deg,#080808,transparent 45%),url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80')}.hero-copy{font-size:13px}.hero-foot{gap:20px;margin-top:45px}.section-head{display:block}.section-intro{margin-top:18px}.crew-grid{grid-template-columns:1fr 1fr;gap:9px}.crew-card{min-height:260px}.crew-info{left:13px;right:13px;bottom:14px}.crew-info h3{font-size:18px}.gallery-grid{grid-template-rows:200px 135px 135px;gap:8px}.form-card{padding:20px}.form-grid{grid-template-columns:1fr;gap:0}.discord-inner,.portal-card,.footer-inner{align-items:flex-start;flex-direction:column}.portal-card{padding:24px}.footer-links{flex-wrap:wrap}.scroll-cue{display:none}.principles{gap:12px}.principle b{font-size:9px}.principle span{font-size:10px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home" aria-label="BlackedOut Originals home">
+      <span class="mark">B/O</span>
+      <span><span class="brand-name">BL ACKEDOUT<br>ORIGINALS</span><span class="brand-sub">THE NAME STANDS</span></span>
+    </a>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#legacy">THE LEGACY</a><a href="#crew">THE CREW</a><a href="#gallery">ARCHIVES</a><a href="#recruitment">RECRUITMENT</a><a href="#discord">DISCORD</a>
+    </nav>
+    <a class="nav-cta" href="#recruitment">Request Entry ↗</a>
+  </div>
+</header>
+<main>
+<section class="hero" id="home">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+    <div class="eyebrow">INDEPENDENT CREW · FIVE M ROLEPLAY</div>
+    <h1>Built in<br><span>shadows.</span><em>Born original.</em></h1>
+    <p class="hero-copy">A close-knit crew of 10–20 players building memorable characters, clean teamwork, and a reputation through roleplay in our FiveM community.</p>
+    <div class="hero-actions"><a class="btn" href="#legacy">Enter the world <span>↗</span></a><a class="btn btn-outline" href="#crew">Meet the crew</a></div>
+    <div class="hero-foot">
+      <div class="hero-stat"><strong>LOYALTY FIRST</strong><span>Our foundation</span></div>
+      <div class="hero-stat"><strong>RESPECT ALWAYS</strong><span>Our standard</span></div>
+      <div class="hero-stat"><strong>ORIGINAL BY NATURE</strong><span>Our identity</span></div>
+    </div>
+  </div>
+  <div class="scroll-cue">SCROLL TO DISCOVER ↓</div>
+</section>
+<section class="section legacy" id="legacy">
+  <div class="wrap legacy-grid reveal">
+    <div class="legacy-art">
+      <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=85" alt="Dark luxury performance car" loading="lazy">
+      <div class="art-overlay"></div><div class="art-caption"><div><small>FILE 001 / IDENTITY</small><br><strong>The Originals</strong></div><small>LOS SANTOS, SAN ANDREAS</small></div>
+    </div>
+    <div class="legacy-copy">
+      <div class="kicker">01 / The organization</div><h2>Not just a name.<br><span>A legacy.</span></h2>
+      <p>BlackedOut Originals is a community crew, not a standalone FiveM server. We bring together 10–20 players around memorable characters, consistent roleplay, loyalty, and respect for the server community we play in.</p>
+      <p>This site showcases our members, screenshots, and recruitment interest. Server rules and staff decisions remain with the community server we play on.</p>
+      <div class="principles"><div class="principle"><b>01 / Loyalty</b><span>Earned through actions.</span></div><div class="principle"><b>02 / Respect</b><span>Given and maintained.</span></div><div class="principle"><b>03 / Legacy</b><span>Built one story at a time.</span></div></div>
+    </div>
+  </div>
+</section>
+<section class="section" id="crew">
+  <div class="wrap">
+    <div class="section-head reveal"><div><div class="kicker">02 / The people behind the name</div><h2>Meet the <span>Originals.</span></h2></div><p class="section-intro">Every role has a story. The roster below is a starter layout. Replace each sample profile with your actual character name, rank, and screenshot.</p></div>
+    <div class="crew-grid reveal">
+      <article class="crew-card"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=80" alt="Temporary profile image 1" loading="lazy"><div class="crew-info"><div class="crew-rank">01 / Leadership</div><h3>Founder Name</h3><p>Founder · Crew leadership</p></div></article>
+      <article class="crew-card"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=700&q=80" alt="Temporary profile image 2" loading="lazy"><div class="crew-info"><div class="crew-rank">02 / Leadership</div><h3>Member Name</h3><p>Co-lead · Crew leadership</p></div></article>
+      <article class="crew-card"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=700&q=80" alt="Temporary profile image 3" loading="lazy"><div class="crew-info"><div class="crew-rank">03 / Original</div><h3>Member Name</h3><p>Core member</p></div></article>
+      <article class="crew-card"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=80" alt="Temporary profile image 4" loading="lazy"><div class="crew-info"><div class="crew-rank">04 / Original</div><h3>Member Name</h3><p>Core member</p></div></article>
+      <article class="crew-card"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=700&q=80" alt="Temporary profile image 5" loading="lazy"><div class="crew-info"><div class="crew-rank">05 / Original</div><h3>Member Name</h3><p>Core member</p></div></article>
+      <article class="crew-card"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=700&q=80" alt="Temporary profile image 6" loading="lazy"><div class="crew-info"><div class="crew-rank">06 / Original</div><h3>Member Name</h3><p>Core member</p></div></article>
+      <article class="crew-card"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=80" alt="Temporary profile image 7" loading="lazy"><div class="crew-info"><div class="crew-rank">07 / Original</div><h3>Member Name</h3><p>Core member</p></div></article>
+      <article class="crew-card"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=700&q=80" alt="Temporary profile image 8" loading="lazy"><div class="crew-info"><div class="crew-rank">08 / Original</div><h3>Member Name</h3><p>Core member</p></div></article>
+      <article class="crew-card"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=700&q=80" alt="Temporary profile image 9" loading="lazy"><div class="crew-info"><div class="crew-rank">09 / Original</div><h3>Member Name</h3><p>Core member</p></div></article>
+      <article class="crew-card"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=80" alt="Temporary profile image 10" loading="lazy"><div class="crew-info"><div class="crew-rank">10 / Original</div><h3>Member Name</h3><p>Core member</p></div></article>
+      <article class="crew-card"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=700&q=80" alt="Temporary profile image 11" loading="lazy"><div class="crew-info"><div class="crew-rank">11 / Original</div><h3>Member Name</h3><p>Core member</p></div></article>
+      <article class="crew-card"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=700&q=80" alt="Temporary profile image 12" loading="lazy"><div class="crew-info"><div class="crew-rank">12 / Original</div><h3>Member Name</h3><p>Core member</p></div></article>
+    </div>
+    <p class="placeholder-note">ROSTER PLACEHOLDERS — add your real member names, ranks, and in-game screenshots before publishing.</p>
+  </div>
+</section>
+<section class="section gallery" id="gallery">
+  <div class="wrap">
+    <div class="section-head reveal"><div><div class="kicker">03 / Moments that stay</div><h2>The <span>archives.</span></h2></div><p class="section-intro">A visual record of your crew screenshots, events, character moments, rides, and cinematic edits from the community server.</p></div>
+    <div class="gallery-grid reveal">
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=85" alt="Performance car at dusk" loading="lazy"><span>01 / After dark</span></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=800&q=80" alt="Automotive detail" loading="lazy"><span>02 / The machines</span></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=800&q=80" alt="Night sky over city" loading="lazy"><span>03 / City lights</span></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=800&q=80" alt="Night atmosphere" loading="lazy"><span>04 / The atmosphere</span></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80" alt="Night sky and mountains" loading="lazy"><span>05 / Beyond the ordinary</span></div>
+    </div>
+    <p class="placeholder-note">Replace these sample images with your own FiveM screenshots. You play on a community server, so only publish images you have permission to share.</p>
+  </div>
+</section>
+<section class="section" id="recruitment">
+  <div class="wrap recruit-layout">
+    <div class="recruit-copy reveal"><div class="kicker">04 / The next chapter</div><h2>Think you<br>belong <span>here?</span></h2><p>We look for players who bring good roleplay, a distinct character, reliability, and respect for the community. Start with an introduction; the crew can review the rest.</p>
+      <div class="requirements"><div><i>✦</i> A developed FiveM roleplay character</div><div><i>✦</i> Mature communication and teamwork</div><div><i>✦</i> Respect for server rules and other players</div><div><i>✦</i> Activity and willingness to build stories</div></div>
+    </div>
+    <form class="form-card reveal" id="application-form">
+      <div class="kicker" style="margin-bottom:22px">Recruitment / Initial application</div>
+      <div class="form-grid"><div class="field"><label for="character">Character name</label><input id="character" name="character" placeholder="Your in-game name" required></div><div class="field"><label for="discord-name">Discord username</label><input id="discord-name" name="discord" placeholder="username" required></div></div>
+      <div class="field"><label for="experience">Roleplay experience</label><input id="experience" name="experience" placeholder="How long have you played FiveM?" required></div>
+      <div class="field"><label for="intro">Introduce your character</label><textarea id="intro" name="intro" placeholder="Character background, play style, and why you want to join…" required></textarea></div>
+      <button class="btn" type="submit">Prepare application ↗</button>
+      <p class="form-message" id="form-message" role="status">Demo only: this page does not send or save applications. Connect a form service or backend before collecting real applications.</p>
+    </form>
+  </div>
+</section>
+<section class="discord-band" id="discord">
+  <div class="wrap discord-inner reveal"><div><div class="kicker" style="color:#ffd0d3">05 / Community access</div><h2>Your next chapter starts on Discord.</h2><p>Announcements, recruitment updates, crew coordination, and community links.</p></div><a class="btn" href="#discord" id="discord-link">Discord invite ↗</a></div>
+</section>
+<section class="section portal" id="portal">
+  <div class="wrap portal-card reveal"><div><div class="kicker">06 / Restricted access</div><h2>Members <span>portal.</span></h2><p>A future private area for crew announcements, event schedules, and member resources. It is a design placeholder for now; secure sign-in and permissions must be implemented before storing private information.</p></div><a class="btn btn-outline" href="#portal" id="portal-link">Member access ↗</a></div>
+</section>
+</main>
+<footer><div class="wrap footer-inner"><a class="brand" href="#home"><span class="mark">B/O</span><span><span class="brand-name">BLACKEDOUT ORIGINALS</span><span class="brand-sub">FIVEM ROLEPLAY CREW</span></span></a><div class="footer-note">A FAN-MADE ROLEPLAY WEBSITE · NOT AFFILIATED WITH ROCKSTAR GAMES</div><div class="footer-links"><a href="#crew">Crew</a><a href="#gallery">Archives</a><a href="#recruitment">Recruit</a></div></div></footer>
+<script>
+const menuButton=document.querySelector('.menu-toggle');
+const nav=document.querySelector('.nav-links');
+menuButton.addEventListener('click',()=>{const open=nav.classList.toggle('open');menuButton.setAttribute('aria-expanded',String(open));menuButton.textContent=open?'✕':'☰'});
+nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{nav.classList.remove('open');menuButton.setAttribute('aria-expanded','false');menuButton.textContent='☰'}));
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+document.querySelector('#application-form').addEventListener('submit',event=>{event.preventDefault();document.querySelector('#form-message').style.display='block'});
+document.querySelector('#discord-link').addEventListener('click',event=>{event.preventDefault();alert('Add your real Discord invite URL to the discord-link button before publishing.')});
+document.querySelector('#portal-link').addEventListener('click',event=>{event.preventDefault();alert('The member portal is a design placeholder. Add authentication and a backend before enabling member access.')});
+</script>
+</body>
+</html>
