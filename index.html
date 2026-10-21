@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#080808">
-<meta name="description" content="BlackedOut Originals — a GTA V FiveM roleplay crew. Loyalty is earned. Respect is built.">
-<title>BlackedOut Originals — Independent FiveM Crew</title>
+<meta name="description" content="BlackedOut Originals — a FiveM roleplay brotherhood shaped by different cities, in-city businesses, and a 2026 reunion.">
+<title>BlackedOut Originals — The Legacy</title>
 <style>
 :root{--bg:#080808;--panel:#111010;--panel2:#171313;--red:#b51220;--red2:#e12735;--white:#f5f1ef;--muted:#a8a09f;--line:rgba(255,255,255,.12);--max:1240px}
 *{box-sizing:border-box}
@@ -64,6 +64,24 @@ h2 span{color:var(--red2)}
 .principle{border-top:1px solid var(--red);padding-top:13px}
 .principle b{display:block;font-size:10px;letter-spacing:.13em;text-transform:uppercase}
 .principle span{display:block;color:var(--muted);font-size:11px;margin-top:6px}
+
+.timeline-section{background:#0a0909;border-block:1px solid rgba(255,255,255,.07)}
+.timeline-intro{max-width:680px;color:var(--muted);font-size:13px;line-height:1.85;margin:18px 0 38px}
+.timeline-list{position:relative;max-width:940px;margin:0 auto}
+.timeline-list:before{content:"";position:absolute;left:112px;top:10px;bottom:10px;width:1px;background:linear-gradient(var(--red2),rgba(181,18,32,.15))}
+.timeline-entry{display:grid;grid-template-columns:86px 1fr;gap:52px;position:relative;padding:0 0 32px}
+.timeline-entry:last-child{padding-bottom:0}
+.timeline-year{color:#ef4a56;font-size:13px;font-weight:900;letter-spacing:.08em;text-align:right;padding-top:23px}
+.timeline-card{position:relative;border:1px solid var(--line);background:linear-gradient(120deg,#151111,#0d0b0b);padding:22px 24px}
+.timeline-card:before{content:"";position:absolute;left:-36px;top:28px;width:9px;height:9px;border:2px solid #e12735;border-radius:50%;background:#0a0909;box-shadow:0 0 18px rgba(225,39,53,.25)}
+.timeline-card .tag{font-size:9px;color:#ef5962;letter-spacing:.18em;text-transform:uppercase;font-weight:800}
+.timeline-card h3{font-size:22px;letter-spacing:-.035em;text-transform:uppercase;margin:8px 0 10px}
+.timeline-card p{color:#b5acab;font-size:12px;line-height:1.85;margin:8px 0}
+.timeline-card ul{padding-left:18px;color:#d6cecc;font-size:11px;line-height:1.9;margin:10px 0}
+.timeline-pill{display:inline-block;border:1px solid rgba(225,39,53,.45);color:#f2c2c5;padding:5px 8px;margin:5px 5px 0 0;font-size:9px;letter-spacing:.08em;text-transform:uppercase}
+.timeline-foot{margin-top:35px;padding:24px;border:1px solid rgba(225,39,53,.3);background:linear-gradient(110deg,rgba(181,18,32,.12),transparent);text-align:center;color:#e5dedd;font-size:13px;letter-spacing:.05em}
+@media(max-width:620px){.timeline-list:before{left:15px}.timeline-entry{grid-template-columns:1fr;gap:8px;padding-left:36px}.timeline-year{text-align:left;padding-top:0}.timeline-card:before{left:-26px;top:27px}.timeline-card{padding:18px}.timeline-card h3{font-size:19px}}
+
 .crew-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
 .crew-card{position:relative;min-height:300px;background:#151212;border:1px solid var(--line);overflow:hidden}
 .crew-card img{position:absolute;width:100%;height:100%;object-fit:cover;filter:grayscale(1);opacity:.58;transition:transform .6s,filter .6s,opacity .6s}
@@ -125,7 +143,7 @@ footer{padding:30px 0;border-top:1px solid var(--line);background:#070707}
     </a>
     <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
     <nav class="nav-links" aria-label="Main navigation">
-      <a href="#legacy">THE LEGACY</a><a href="#crew">THE CREW</a><a href="#gallery">ARCHIVES</a><a href="#recruitment">RECRUITMENT</a><a href="#discord">DISCORD</a>
+      <a href="#legacy">THE LEGACY</a><a href="#timeline">TIMELINE</a><a href="#crew">THE CREW</a><a href="#gallery">ARCHIVES</a><a href="#recruitment">RECRUITMENT</a><a href="#discord">DISCORD</a>
     </nav>
     <a class="nav-cta" href="#recruitment">Request Entry ↗</a>
   </div>
@@ -136,7 +154,7 @@ footer{padding:30px 0;border-top:1px solid var(--line);background:#070707}
   <div class="wrap hero-inner">
     <div class="eyebrow">INDEPENDENT CREW · FIVE M ROLEPLAY</div>
     <h1>Built in<br><span>shadows.</span><em>Born original.</em></h1>
-    <p class="hero-copy">A close-knit crew of 10–20 players building memorable characters, clean teamwork, and a reputation through roleplay in our FiveM community.</p>
+    <p class="hero-copy">A brotherhood born in IURS City, forged across roleplay cities, and reunited in 2026 to rebuild BlackedOut Originals in TCRS by VIBE CITY.</p>
     <div class="hero-actions"><a class="btn" href="#legacy">Enter the world <span>↗</span></a><a class="btn btn-outline" href="#crew">Meet the crew</a></div>
     <div class="hero-foot">
       <div class="hero-stat"><strong>LOYALTY FIRST</strong><span>Our foundation</span></div>
@@ -154,35 +172,59 @@ footer{padding:30px 0;border-top:1px solid var(--line);background:#070707}
     </div>
     <div class="legacy-copy">
       <div class="kicker">01 / The organization</div><h2>Not just a name.<br><span>A legacy.</span></h2>
-      <p>BlackedOut Originals is a community crew, not a standalone FiveM server. We bring together 10–20 players around memorable characters, consistent roleplay, loyalty, and respect for the server community we play in.</p>
-      <p>This site showcases our members, screenshots, and recruitment interest. Server rules and staff decisions remain with the community server we play on.</p>
+      <p>BlackedOut Originals is a roleplay gang built on brotherhood. From the first meeting in IURS City to the 2026 reunion in TCRS by VIBE CITY, our identity has been shaped by loyalty, teamwork, business, and shared memories.</p>
+      <p>This site tells our history, showcases our crew and memories, and introduces the next chapter. City rules and staff decisions remain with the roleplay community we play in.</p>
       <div class="principles"><div class="principle"><b>01 / Loyalty</b><span>Earned through actions.</span></div><div class="principle"><b>02 / Respect</b><span>Given and maintained.</span></div><div class="principle"><b>03 / Legacy</b><span>Built one story at a time.</span></div></div>
     </div>
   </div>
 </section>
-<section class="section" id="crew">
+
+<section class="section timeline-section" id="timeline">
   <div class="wrap">
-    <div class="section-head reveal"><div><div class="kicker">02 / The people behind the name</div><h2>Meet the <span>Originals.</span></h2></div><p class="section-intro">Every role has a story. The roster below is a starter layout. Replace each sample profile with your actual character name, rank, and screenshot.</p></div>
-    <div class="crew-grid reveal">
-      <article class="crew-card"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=80" alt="Temporary profile image 1" loading="lazy"><div class="crew-info"><div class="crew-rank">01 / Leadership</div><h3>Founder Name</h3><p>Founder · Crew leadership</p></div></article>
-      <article class="crew-card"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=700&q=80" alt="Temporary profile image 2" loading="lazy"><div class="crew-info"><div class="crew-rank">02 / Leadership</div><h3>Member Name</h3><p>Co-lead · Crew leadership</p></div></article>
-      <article class="crew-card"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=700&q=80" alt="Temporary profile image 3" loading="lazy"><div class="crew-info"><div class="crew-rank">03 / Original</div><h3>Member Name</h3><p>Core member</p></div></article>
-      <article class="crew-card"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=80" alt="Temporary profile image 4" loading="lazy"><div class="crew-info"><div class="crew-rank">04 / Original</div><h3>Member Name</h3><p>Core member</p></div></article>
-      <article class="crew-card"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=700&q=80" alt="Temporary profile image 5" loading="lazy"><div class="crew-info"><div class="crew-rank">05 / Original</div><h3>Member Name</h3><p>Core member</p></div></article>
-      <article class="crew-card"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=700&q=80" alt="Temporary profile image 6" loading="lazy"><div class="crew-info"><div class="crew-rank">06 / Original</div><h3>Member Name</h3><p>Core member</p></div></article>
-      <article class="crew-card"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=80" alt="Temporary profile image 7" loading="lazy"><div class="crew-info"><div class="crew-rank">07 / Original</div><h3>Member Name</h3><p>Core member</p></div></article>
-      <article class="crew-card"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=700&q=80" alt="Temporary profile image 8" loading="lazy"><div class="crew-info"><div class="crew-rank">08 / Original</div><h3>Member Name</h3><p>Core member</p></div></article>
-      <article class="crew-card"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=700&q=80" alt="Temporary profile image 9" loading="lazy"><div class="crew-info"><div class="crew-rank">09 / Original</div><h3>Member Name</h3><p>Core member</p></div></article>
-      <article class="crew-card"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=80" alt="Temporary profile image 10" loading="lazy"><div class="crew-info"><div class="crew-rank">10 / Original</div><h3>Member Name</h3><p>Core member</p></div></article>
-      <article class="crew-card"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=700&q=80" alt="Temporary profile image 11" loading="lazy"><div class="crew-info"><div class="crew-rank">11 / Original</div><h3>Member Name</h3><p>Core member</p></div></article>
-      <article class="crew-card"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=700&q=80" alt="Temporary profile image 12" loading="lazy"><div class="crew-info"><div class="crew-rank">12 / Original</div><h3>Member Name</h3><p>Core member</p></div></article>
+    <div class="kicker reveal">02 / The history behind the name</div>
+    <h2 class="reveal">Different cities.<br><span>One brotherhood.</span></h2>
+    <p class="timeline-intro reveal">From the first meeting in IURS City to the 2026 reunion in TCRS by VIBE CITY, the BlackedOut story is built on brotherhood, loyalty, business, and memories made together across different roleplay cities.</p>
+    <div class="timeline-list">
+      <article class="timeline-entry reveal"><div class="timeline-year">CH. 01</div><div class="timeline-card"><div class="tag">Chapter 01 / The beginning</div><h3>IURS City — Where brothers met</h3><p>It began in Indian Ultra Roleplay city (IURS) City. A group of players met, built real friendships through roleplay, and became brothers. Before there was a gang name, there was a family.</p></div></article>
+      <article class="timeline-entry reveal"><div class="timeline-year">CH. 02</div><div class="timeline-card"><div class="tag">Chapter 02 / The name is born</div><h3>TCRP City — BlackedOut Originals</h3><p>The family moved together to Telugu Community Roleplay (TCRP) City. In time, that brotherhood became a gang: <strong>BlackedOut Originals</strong>.</p><p><strong>Founders:</strong></p><div><span class="timeline-pill">B4m Kill</span><span class="timeline-pill">Taco</span><span class="timeline-pill">Nikhil</span><span class="timeline-pill">Tarak Reddy</span></div><p><strong>Members of the TCRP era:</strong></p><div><span class="timeline-pill">Daito</span><span class="timeline-pill">Charan Reddy</span><span class="timeline-pill">Praneeth</span><span class="timeline-pill">Shashi Patel</span><span class="timeline-pill">SG</span><span class="timeline-pill">Rubel Kiran</span><span class="timeline-pill">Flair</span><span class="timeline-pill">Sai Reddy</span><span class="timeline-pill">Rohan Sai</span><span class="timeline-pill">Ruthik</span><span class="timeline-pill">Sumanth</span></div><p>Time passed, the crew grew, and BlackedOut became an established gang with a name and identity of its own.</p></div></article>
+      <article class="timeline-entry reveal"><div class="timeline-year">CH. 03</div><div class="timeline-card"><div class="tag">Chapter 03 / Old blood, new blood</div><h3>Maayalokam City — A stronger family</h3><p>As time passed, some founders and members became inactive. The family stepped into Maayalokam Roleplay City, where familiar faces met new blood and the gang entered another phase of growth.</p><div><span class="timeline-pill">Venki</span><span class="timeline-pill">Cyber Paul</span><span class="timeline-pill">Nurat</span><span class="timeline-pill">Bharat</span><span class="timeline-pill">Telugu Gaming</span><span class="timeline-pill">Manu Virat</span><span class="timeline-pill">Dinesh</span><span class="timeline-pill">Zero Nithin</span></div><p>Together, old and new members strengthened the crew and built new memories.</p></div></article>
+      <article class="timeline-entry reveal"><div class="timeline-year">MILESTONE</div><div class="timeline-card"><div class="tag">Chapter 04 / The first major venture</div><h3>LS Customs acquired</h3><p>BlackedOut successfully acquired <strong>LS Customs</strong>, marking the family's first major business venture. The gang expanded beyond its reputation and began building its presence through in-city business.</p><ul><li><strong>LS Customs:</strong> mechanic business, vehicle customization, and repair operations</li><li><strong>Food business:</strong> food production, food sales, and business expansion</li></ul></div></article>
+      <article class="timeline-entry reveal"><div class="timeline-year">CH. 05</div><div class="timeline-card"><div class="tag">Chapter 05 / A quieter chapter</div><h3>After the wars</h3><p>BlackedOut faced rival gangs and police through intense roleplay conflicts. After the wars, the gang kept a lower profile for a while. Many members returned to everyday in-city life, while some moved on to a new city.</p></div></article>
+      <article class="timeline-entry reveal"><div class="timeline-year">CH. 06</div><div class="timeline-card"><div class="tag">Chapter 06 / The journey continues</div><h3>ATRP City — Another chapter</h3><p>Some brothers continued their journey in Amazing Telugu Roleplay (ATRP) City. BlackedOut began another chapter, carrying its identity forward through business, teamwork, and the bonds between its members.</p><ul><li><strong>LS Customs:</strong> vehicle customization and repairs</li><li><strong>Food business:</strong> food production, sales, and expansion</li><li>Family continued to grow through shared experiences</li></ul></div></article>
+      <article class="timeline-entry reveal"><div class="timeline-year">2026</div><div class="timeline-card"><div class="tag">Chapter 07 / The brothers reunite</div><h3>TCRS by VIBE CITY — Rise again</h3><p>In 2026, BlackedOut arrives in <strong>TCRS by VIBE CITY</strong> for a fresh beginning. After years of memories and different journeys across roleplay cities, the brothers have another chance to reunite.</p><p>The mission is bigger than simply returning: rebuild BLACK GANG, establish its identity, and begin the journey from the ground up.</p><ul><li>Brothers reunite in a new city</li><li>A new identity and reputation to build</li><li>New opportunities, businesses, and memories ahead</li></ul></div></article>
     </div>
-    <p class="placeholder-note">ROSTER PLACEHOLDERS — add your real member names, ranks, and in-game screenshots before publishing.</p>
+    <div class="timeline-foot reveal">THE CITY MAY CHANGE. THE BROTHERHOOD REMAINS.<br><span style="color:#e34a54">THE LEGACY CONTINUES.</span></div>
   </div>
 </section>
+
+<section class="section" id="crew"><div class="wrap"><div class="section-head reveal"><div><div class="kicker">03 / The people behind the name</div><h2>Meet the <span>Originals.</span></h2></div><p class="section-intro">The names below are part of the history shared for BlackedOut Originals, across the TCRP and Maayalokam eras. This is a historical roster, not a claim that every member is currently active.</p></div><div class="crew-grid reveal">
+<article class="crew-card"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=80" alt="Temporary profile image for B4m Kill" loading="lazy"><div class="crew-info"><div class="crew-rank">01 / Founder</div><h3>B4m Kill</h3><p>Founding member</p></div></article>
+<article class="crew-card"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=700&q=80" alt="Temporary profile image for Taco" loading="lazy"><div class="crew-info"><div class="crew-rank">02 / Founder</div><h3>Taco</h3><p>Founding member</p></div></article>
+<article class="crew-card"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=700&q=80" alt="Temporary profile image for Nikhil" loading="lazy"><div class="crew-info"><div class="crew-rank">03 / Founder</div><h3>Nikhil</h3><p>Founding member</p></div></article>
+<article class="crew-card"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=80" alt="Temporary profile image for Tarak Reddy" loading="lazy"><div class="crew-info"><div class="crew-rank">04 / Founder</div><h3>Tarak Reddy</h3><p>Founding member</p></div></article>
+<article class="crew-card"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=700&q=80" alt="Temporary profile image for Daito" loading="lazy"><div class="crew-info"><div class="crew-rank">05 / TCRP era</div><h3>Daito</h3><p>TCRP-era member</p></div></article>
+<article class="crew-card"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=700&q=80" alt="Temporary profile image for Charan Reddy" loading="lazy"><div class="crew-info"><div class="crew-rank">06 / TCRP era</div><h3>Charan Reddy</h3><p>TCRP-era member</p></div></article>
+<article class="crew-card"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=80" alt="Temporary profile image for Praneeth" loading="lazy"><div class="crew-info"><div class="crew-rank">07 / TCRP era</div><h3>Praneeth</h3><p>TCRP-era member</p></div></article>
+<article class="crew-card"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=700&q=80" alt="Temporary profile image for Shashi Patel" loading="lazy"><div class="crew-info"><div class="crew-rank">08 / TCRP era</div><h3>Shashi Patel</h3><p>TCRP-era member</p></div></article>
+<article class="crew-card"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=700&q=80" alt="Temporary profile image for SG" loading="lazy"><div class="crew-info"><div class="crew-rank">09 / TCRP era</div><h3>SG</h3><p>TCRP-era member</p></div></article>
+<article class="crew-card"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=80" alt="Temporary profile image for Rubel Kiran" loading="lazy"><div class="crew-info"><div class="crew-rank">10 / TCRP era</div><h3>Rubel Kiran</h3><p>TCRP-era member</p></div></article>
+<article class="crew-card"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=700&q=80" alt="Temporary profile image for Flair" loading="lazy"><div class="crew-info"><div class="crew-rank">11 / TCRP era</div><h3>Flair</h3><p>TCRP-era member</p></div></article>
+<article class="crew-card"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=700&q=80" alt="Temporary profile image for Sai Reddy" loading="lazy"><div class="crew-info"><div class="crew-rank">12 / TCRP era</div><h3>Sai Reddy</h3><p>TCRP-era member</p></div></article>
+<article class="crew-card"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=80" alt="Temporary profile image for Rohan Sai" loading="lazy"><div class="crew-info"><div class="crew-rank">13 / TCRP era</div><h3>Rohan Sai</h3><p>TCRP-era member</p></div></article>
+<article class="crew-card"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=700&q=80" alt="Temporary profile image for Ruthik" loading="lazy"><div class="crew-info"><div class="crew-rank">14 / TCRP era</div><h3>Ruthik</h3><p>TCRP-era member</p></div></article>
+<article class="crew-card"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=700&q=80" alt="Temporary profile image for Sumanth" loading="lazy"><div class="crew-info"><div class="crew-rank">15 / TCRP era</div><h3>Sumanth</h3><p>TCRP-era member</p></div></article>
+<article class="crew-card"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=80" alt="Temporary profile image for Venki" loading="lazy"><div class="crew-info"><div class="crew-rank">16 / Maayalokam era</div><h3>Venki</h3><p>New blood</p></div></article>
+<article class="crew-card"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=700&q=80" alt="Temporary profile image for Cyber Paul" loading="lazy"><div class="crew-info"><div class="crew-rank">17 / Maayalokam era</div><h3>Cyber Paul</h3><p>New blood</p></div></article>
+<article class="crew-card"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=700&q=80" alt="Temporary profile image for Nurat" loading="lazy"><div class="crew-info"><div class="crew-rank">18 / Maayalokam era</div><h3>Nurat</h3><p>New blood</p></div></article>
+<article class="crew-card"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=80" alt="Temporary profile image for Bharat" loading="lazy"><div class="crew-info"><div class="crew-rank">19 / Maayalokam era</div><h3>Bharat</h3><p>New blood</p></div></article>
+<article class="crew-card"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=700&q=80" alt="Temporary profile image for Telugu Gaming" loading="lazy"><div class="crew-info"><div class="crew-rank">20 / Maayalokam era</div><h3>Telugu Gaming</h3><p>New blood</p></div></article>
+<article class="crew-card"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=700&q=80" alt="Temporary profile image for Manu Virat" loading="lazy"><div class="crew-info"><div class="crew-rank">21 / Maayalokam era</div><h3>Manu Virat</h3><p>New blood</p></div></article>
+<article class="crew-card"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=80" alt="Temporary profile image for Dinesh" loading="lazy"><div class="crew-info"><div class="crew-rank">22 / Maayalokam era</div><h3>Dinesh</h3><p>New blood</p></div></article>
+<article class="crew-card"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=700&q=80" alt="Temporary profile image for Zero Nithin" loading="lazy"><div class="crew-info"><div class="crew-rank">23 / Maayalokam era</div><h3>Zero Nithin</h3><p>New blood</p></div></article>
+</div><p class="placeholder-note">Profile photos are temporary stock images. Replace them with your own character portraits or FiveM screenshots before publishing.</p></div></section>
 <section class="section gallery" id="gallery">
   <div class="wrap">
-    <div class="section-head reveal"><div><div class="kicker">03 / Moments that stay</div><h2>The <span>archives.</span></h2></div><p class="section-intro">A visual record of your crew screenshots, events, character moments, rides, and cinematic edits from the community server.</p></div>
+    <div class="section-head reveal"><div><div class="kicker">04 / Moments that stay</div><h2>The <span>archives.</span></h2></div><p class="section-intro">A visual record of crew screenshots, events, character moments, rides, and cinematic edits from the cities that shaped the family.</p></div>
     <div class="gallery-grid reveal">
       <div class="gallery-item"><img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=85" alt="Performance car at dusk" loading="lazy"><span>01 / After dark</span></div>
       <div class="gallery-item"><img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=800&q=80" alt="Automotive detail" loading="lazy"><span>02 / The machines</span></div>
@@ -190,13 +232,13 @@ footer{padding:30px 0;border-top:1px solid var(--line);background:#070707}
       <div class="gallery-item"><img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=800&q=80" alt="Night atmosphere" loading="lazy"><span>04 / The atmosphere</span></div>
       <div class="gallery-item"><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80" alt="Night sky and mountains" loading="lazy"><span>05 / Beyond the ordinary</span></div>
     </div>
-    <p class="placeholder-note">Replace these sample images with your own FiveM screenshots. You play on a community server, so only publish images you have permission to share.</p>
+    <p class="placeholder-note">Replace these sample images with your own FiveM screenshots. You play on a community city, so only publish images you have permission to share.</p>
   </div>
 </section>
 <section class="section" id="recruitment">
   <div class="wrap recruit-layout">
-    <div class="recruit-copy reveal"><div class="kicker">04 / The next chapter</div><h2>Think you<br>belong <span>here?</span></h2><p>We look for players who bring good roleplay, a distinct character, reliability, and respect for the community. Start with an introduction; the crew can review the rest.</p>
-      <div class="requirements"><div><i>✦</i> A developed FiveM roleplay character</div><div><i>✦</i> Mature communication and teamwork</div><div><i>✦</i> Respect for server rules and other players</div><div><i>✦</i> Activity and willingness to build stories</div></div>
+    <div class="recruit-copy reveal"><div class="kicker">05 / The next chapter</div><h2>Think you<br>belong <span>here?</span></h2><p>We look for players who bring good roleplay, a distinct character, reliability, and respect for the community. Start with an introduction; the crew can review the rest.</p>
+      <div class="requirements"><div><i>✦</i> A developed FiveM roleplay character</div><div><i>✦</i> Mature communication and teamwork</div><div><i>✦</i> Respect for city rules and other players</div><div><i>✦</i> Activity and willingness to build stories</div></div>
     </div>
     <form class="form-card reveal" id="application-form">
       <div class="kicker" style="margin-bottom:22px">Recruitment / Initial application</div>
@@ -209,10 +251,10 @@ footer{padding:30px 0;border-top:1px solid var(--line);background:#070707}
   </div>
 </section>
 <section class="discord-band" id="discord">
-  <div class="wrap discord-inner reveal"><div><div class="kicker" style="color:#ffd0d3">05 / Community access</div><h2>Your next chapter starts on Discord.</h2><p>Announcements, recruitment updates, crew coordination, and community links.</p></div><a class="btn" href="#discord" id="discord-link">Discord invite ↗</a></div>
+  <div class="wrap discord-inner reveal"><div><div class="kicker" style="color:#ffd0d3">06 / Community access</div><h2>Your next chapter starts on Discord.</h2><p>Announcements, recruitment updates, crew coordination, and community links.</p></div><a class="btn" href="#discord" id="discord-link">Discord invite ↗</a></div>
 </section>
 <section class="section portal" id="portal">
-  <div class="wrap portal-card reveal"><div><div class="kicker">06 / Restricted access</div><h2>Members <span>portal.</span></h2><p>A future private area for crew announcements, event schedules, and member resources. It is a design placeholder for now; secure sign-in and permissions must be implemented before storing private information.</p></div><a class="btn btn-outline" href="#portal" id="portal-link">Member access ↗</a></div>
+  <div class="wrap portal-card reveal"><div><div class="kicker">07 / Restricted access</div><h2>Members <span>portal.</span></h2><p>A future private area for crew announcements, event schedules, and member resources. It is a design placeholder for now; secure sign-in and permissions must be implemented before storing private information.</p></div><a class="btn btn-outline" href="#portal" id="portal-link">Member access ↗</a></div>
 </section>
 </main>
 <footer><div class="wrap footer-inner"><a class="brand" href="#home"><span class="mark">B/O</span><span><span class="brand-name">BLACKEDOUT ORIGINALS</span><span class="brand-sub">FIVEM ROLEPLAY CREW</span></span></a><div class="footer-note">A FAN-MADE ROLEPLAY WEBSITE · NOT AFFILIATED WITH ROCKSTAR GAMES</div><div class="footer-links"><a href="#crew">Crew</a><a href="#gallery">Archives</a><a href="#recruitment">Recruit</a></div></div></footer>
